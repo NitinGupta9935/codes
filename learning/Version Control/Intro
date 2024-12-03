@@ -1,0 +1,19 @@
+Version Control System:-    (Track History, Work Together)
+-> Centralized  
+-> Distributed  
+
+Centralized 
+{
+    -> connect to a central Server
+    -> if Server goes offline every one disconnected
+
+    examples => Subversion, Team Foundation Server
+}
+
+Distributed 
+{
+    -> Every one has their own DB or project Stored
+    -> if Server goes offline every one Server their file another directly  
+
+    examples => Git, Mercurial
+}

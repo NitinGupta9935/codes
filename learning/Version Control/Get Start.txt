@@ -1,0 +1,28 @@
+=> use Git BASH
+git --version
+
+git config --global user.name "Nitin Gupta"     { if text has some space in between then we use ""}
+git config --global user.email guptanitin493@gmail.com
+
+=> To Open vs code -> code {Enter}
+
+=> Configuring :-
+{
+    Configuration setting has 3 different levels
+    -> SYSTEM   All users
+    -> GLOBAL   All repositories of the current user
+    -> LOCAL    The current repository
+}
+
+git config --global core.editor "code --wait"
+git config --global -e      {Go and close text editor}
+=> end of line in Windows -> \n or \r    
+=> end of line in MacOS -> \n    
+=> \n -> Line Feed, \r -> Carriage Return
+git config --global core.autoclrf input (to solve Windows or MacOS Problem )
+
+Help:-
+(some command to get command info)
+git --help
+git --h
+

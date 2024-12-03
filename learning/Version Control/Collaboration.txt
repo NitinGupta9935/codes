@@ -1,0 +1,89 @@
+Clone a repository {
+    git clone 'URL'
+
+    git log --oneline --all --graph
+
+    => Some other command
+    {
+        git branch
+
+        git remote 
+
+        git remote -v
+    }
+
+    => For Update (if remote repository is Update then we need to update in our system) {
+        git fetch
+ 
+        git merge origin/master
+        OR 
+        git merge origin/main
+    }
+
+    => "origin/Master" OR "origin/Main" are Local repositories (our computer repositories)
+}
+
+Fetching {
+    git log --oneline --all --graph     {to see all commit}
+
+    git fetch       {For download new commit}
+
+    git log --online --all --graph
+
+    git branch -vv      {It show how our local or remote tracking branch are diverging (changing)}
+
+    git merge origin/main       {For merge}
+
+    git log --oneline --all --graph
+
+    git branch -vv
+
+}
+
+Pulling {
+    git commit -m "Something like add file"
+    git pull
+                OR git pull origin main
+    -> by this combine multiple combine happen
+
+    OR 
+
+    git pull --rebase
+    -> by this combine multi-level combine happen
+
+    => To check status
+    git log --oneline --all --graph
+
+    => For undu pulled commit
+    git reset --hard HEAD~1
+
+}
+
+Pushing {
+    
+    git push 
+
+    => if someone make some change in remote repositories then we need do (fetch + merge) then push 
+    git pull --rebase
+
+    => we over-ride someone code 
+    git push -f     { Warning => this will delete someone data}
+}
+
+Storing credentials {
+    => To check Credential is install or not 
+    git credential-osxkeychain
+
+    => Use to store id and password in encrypted form
+    git config --global credential.helper cache     {this will store 15 min only}
+
+
+    => For permanent store Install Credential 
+    https://github.com/Microsoft/Git-Credential-Manager-for-Windows
+
+    git config --global credential.helper osxkeychain
+}
+
+sharing tags {
+    => tags is use to share code in zip file
+}

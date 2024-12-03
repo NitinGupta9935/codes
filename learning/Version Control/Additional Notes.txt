@@ -1,0 +1,32 @@
+By default github create default brach to master
+To rename it as main {
+
+    // Switch to branch
+    git chechout master
+
+    // Rename it
+    git branch -m main
+
+    // Update the Remote Branch
+        // Push the renamed branch to the remote repository
+        git push -u origin main
+
+        // Open github 
+        // then your project dir
+        // then open settings 
+        // Under default branch change the branch to main
+
+        // Delete the old branch on the remote
+        git push origin --delete master
+
+    // OPTIONAL 
+    Update Local Clones of the Repository {
+        git fetch origin
+        git branch -u origin/main main
+        git remote prune origin
+    }
+}
+
+Configure Default Branch Name for Future Repositories {
+    git config --global init.defaultBranch main
+}

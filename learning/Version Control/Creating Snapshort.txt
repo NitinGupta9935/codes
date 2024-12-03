@@ -1,0 +1,216 @@
+Create branch {
+    git checkout -b <branch_name>
+}
+
+Add changes and commit changes {
+    git add .
+    git commit -m "done something"
+}
+
+Push the branch to Remote Repository {
+    git push origin <branch_name>
+}
+
+Merge the branch into Main {
+    // switch to the main branch
+    git checkout main
+
+    // pull the latest changes 
+    git pull origin main
+    
+    // Merge the New Branch
+    git merge <branch_name>
+
+    // Push Merged Changes to Remote 
+    git push origin main
+
+    // OPTIONAL
+    // Delete the Feature Branch    
+        // Locally
+        git branch -d <branch_name>
+        
+        // Remotely
+        git push origin --delete <branch_name>
+
+}
+
+=> make folder -> mkdir Moon
+
+.git repository (git init){
+    => Initialize a Empty Git repository
+    git init
+
+    // Git sub directory is hidden (.git)
+    ls
+    // To see Git sub directory
+    ls -a   (list all)
+    => Warning -> Don't touch .git repository
+
+    // For Color Full Interface install (posh-git)
+
+    // To remove Git repository
+    rm -rf .git
+}
+
+Workflow{
+    project -> Staging Area (Index) -> Git (Snapshort)
+    
+    project -> Staging Area (git add file1 file2) -> Git (git commit -m "Some Snapshort message")
+}
+
+Staging Files {
+    echo hello > file1.txt
+
+    echo world > file2.txt
+
+    // to see git Status
+    git status
+
+    // Move to Staging
+    git add file1.txt
+    OR 
+    git add file1.txt file2.txt     (multiple)
+    OR 
+    git add *.txt                   (use patterns)
+    Or 
+    git add .                       (add Entire directory recursively)
+
+    echo world >> file1.txt     (>> use to append )
+}
+
+Commit Changes {
+    git commit -m "Initial commit."
+
+    // if we want to write long commit message
+    git commit      (this will opens VS "Write your message on top")
+}
+
+Skipping the Staging {
+    git commit -am "Fixed some bugs"
+
+    OR
+    git commit -a -m "Fixed some bugs"
+
+    => -a -> all modified files
+    => -m -> some message
+}
+
+Removing files {
+    rm file2.txt
+    {
+        git status
+        git ls-files
+    }
+
+    git add file2.txt
+
+    git commit -m "Remove unused code." 
+
+    => To remove from Both "Staging area" Or "git"
+    git rm file2.txt
+}
+
+Rename Or move files {
+    {
+        mv file1.txt main.js
+
+        git add file1.txt
+    
+        git add main.js
+    }
+
+    OR 
+
+    {
+        git mv file1.txt main.js
+    }
+
+    git status
+
+    git commit -m "Rename Some file"
+}
+
+"Log files" are somthing that we not want to share Or don't want to synchronize with other team member  
+
+Ignoring Files {
+    To ignore files
+    {
+        -> Making folder
+        mkdir logs 
+
+        -> Write something on folder
+        echo hello > logs/dev.logs
+
+        echo logs/ > .gitignore
+        code .gitignore     {VS is open write files name which you want to ignore}
+
+        git add .gitignore
+
+        git commit -m "Add gitignore"
+    }
+
+    What if you added files first and then try to ignore files {
+        => After adding files .gitignore is not gonna ignore files 
+
+        => To solve this  "We have to remove it form staging area"
+        git rm -h   {For Help}
+
+        git rm --cached -r bin/
+        -> --cached => remove form the staging area 
+        -> -r => allow recursive removal
+        -> bin/ is folder
+
+        git commit -m "Removal the bin directory that was accidentally commited"
+    }
+}
+
+Short Status {
+    git status -s 
+
+    => Go and watch video
+}
+
+Viewing Staging and UnStaging changes {
+    git diff                {we can see un-stage changes}
+
+    git diff --staged       {we can see stage changes}
+}
+
+visual Diff Tools {
+    Diff Tools {
+        -> KDiff3
+        -> P4Merge
+        -> WinMerge (Windows only)
+        -> VSCode
+    }
+
+    => we have to tell Git that we use visual-studio for default diff Tools
+    git config --global diff.tool vscode
+
+    => Tell Git how to launch vscode
+    git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+    -> --wait => wait until we close vscode
+    -> --diff => Tell Git that we are using vscode for diff or comparing files
+
+    => For edit our global configuration setting
+    git config --global -e      {edit }
+
+    To see our un-stage changes {
+        git difftool
+    }
+
+    To see our stage changes {
+        git difftool --staged
+    }
+
+Viewing History {
+    git log 
+
+    OR 
+
+    git log --oneline   {log details in one line}
+
+    OR 
+
+    git log --oneline --reverse     {log details in reverse order}
+}
