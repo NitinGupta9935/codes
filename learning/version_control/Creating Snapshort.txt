@@ -4,6 +4,7 @@ Create branch {
 
 Add changes and commit changes {
     git add .
+    git status
     git commit -m "done something"
 }
 
