@@ -1,5 +1,8 @@
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        composite_pattern.file_system.solution.Main.main(new String[] {});
+
     }
 }
