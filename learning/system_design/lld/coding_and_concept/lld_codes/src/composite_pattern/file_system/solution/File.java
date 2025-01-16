@@ -1,7 +1,7 @@
 package composite_pattern.file_system.solution;
 
 public class File implements FileSystem {
-    String fileName;
+    public String fileName;
 
     public File(String name) {
         this.fileName = name;
@@ -9,6 +9,6 @@ public class File implements FileSystem {
 
     @Override
     public void ls() {
-        System.out.println("file name " + fileName);
+        System.out.println("File name " + fileName);
     }
 }

@@ -2,7 +2,7 @@ package composite_pattern.file_system.solution;
 
 public class Main {
 
-    public static void main(String args[]) {
+    public static void main() {
         Directory movieDirectory = new Directory("Movie");
 
         FileSystem border = new File("Border.mp4");
@@ -14,11 +14,11 @@ public class Main {
         movieDirectory.add(comedyMovieDirectory);
 
         movieDirectory.ls();
-
     }
 
     /*
     Movie -> Border.mp4
-             ComedyMovie -> Hulchul.mp4
-     */
+             ComedyMovie -> hulchul.mp4
+
+    */
 }

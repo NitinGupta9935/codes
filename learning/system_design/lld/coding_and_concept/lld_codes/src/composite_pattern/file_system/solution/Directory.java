@@ -1,10 +1,11 @@
 package composite_pattern.file_system.solution;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Directory implements FileSystem {
-    String directoryName;
-    List<FileSystem> fileSystemList;
+    public String directoryName;
+    List<FileSystem> fileSystemList = new ArrayList<>();
 
     public Directory(String name) {
         this.directoryName = name;
