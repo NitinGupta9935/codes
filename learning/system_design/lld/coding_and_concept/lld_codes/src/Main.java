@@ -1,8 +1,8 @@
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
 
-        composite_pattern.file_system.solution.Main.main();
+    public static void main(String[] args) {
 
     }
 }
