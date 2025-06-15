@@ -10,7 +10,11 @@ public class NotesApplication {
 		SpringApplication.run(NotesApplication.class, args);
 
 		String a = "MESSAGE", b = "OFFLINE";
-		System.out.println(a.compareTo(b));	
+		System.out.println(a.compareTo(b));
+
+		int i = 23432;
+
+		String str = new String(i + " ");
 
 	}
 
