@@ -10,3 +10,7 @@ mvn -f OrderService/pom.xml spring-boot:run &
 jobs
 kill %1
 kill %2
+
+* Test API 
+GET http://localhost:8082/products/2
+GET http://localhost:8081/orders/1
