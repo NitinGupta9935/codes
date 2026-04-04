@@ -82,15 +82,15 @@ public class UserService {
     }
 
 
-    @Transactional
-    public void deleteRelated() {
-//        userRepository.deleteById(3L);
-
-        User user = userRepository.findById(7L).orElseThrow();
-        Address address = user.getAddresses().getFirst();
-        user.removeAddress(address);
-        userRepository.save(user);
-    }
+//    @Transactional
+//    public void deleteRelated() {
+////        userRepository.deleteById(3L);
+//
+//        User user = userRepository.findById(7L).orElseThrow();
+//        Address address = user.getAddresses().getFirst();
+//        user.removeAddress(address);
+//        userRepository.save(user);
+//    }
 
     @Transactional
     public void addWishlist() {
