@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/products")
-public class Controller {
+public class ProductController {
     
     @GetMapping("/{id}")
     public String getProduct(@PathVariable String id) {
         return "Product fetched with id: " + id;
-    }
+    }   
 }
