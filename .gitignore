@@ -1,6 +1,26 @@
-learning/backend/spring_boot/code_with_mosh/Part2/target
+# Maven
+**/target/
+
+# Gradle
+**/.gradle/
+**/build/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+
+# Temporary
+temp/
+*.tmp
+
+# Archives
+*.zip
+
+# Hidden files
 .*
-**/.*
 !.gitignore
 !.gitattributes
-temp
